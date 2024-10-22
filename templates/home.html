@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_home.css') }}">
+    <title>Home</title>
+</head>
+<body>
+    {% if session.username %}
+        <div class="home-container">
+            <a href="{{ url_for('ventas') }}">
+                <div class="home-title">
+                    <img src="{{ url_for('static', filename='images/ventas.svg') }}" alt="Ventas">
+                    Ventas
+                </div>
+            </a>
+            <a href="{{ url_for('inventario') }}">
+                <div class="home-title">
+                    <img src="{{ url_for('static', filename='images/inventario.svg') }}" alt="Inventario">
+                    Inventario
+                </div>
+            </a>
+            <a href="{{ url_for('pedidos') }}">
+                <div class="home-title">
+                    <img src="{{ url_for('static', filename='images/pedidos.svg') }}" alt="Pedidos">
+                    Pedidos
+                </div>
+            </a>
+            {% if session.role <= 2 %}
+                <a href="{{ url_for('estadisticas') }}">
+                    <div class="home-title">
+                        <img src="{{ url_for('static', filename='images/estats.svg') }}" alt="Estats">
+                        Estadísticas
+                    </div>
+                </a>
+                <a href="{{ url_for('facturas') }}">
+                    <div class="home-title">
+                        <img src="{{ url_for('static', filename='images/facturas.svg') }}" alt="Facturas">
+                        Facturas
+                    </div>
+                </a>
+            {% endif %}
+            {% if session.role <= 1 %}
+                <a href="{{ url_for('administracion') }}">
+                    <div class="home-title">
+                        <img src="{{ url_for('static', filename='images/admin.svg') }}" alt="Admin">
+                        Administración
+                    </div>
+                </a>
+            {% endif %}
+        </div>
+    {% else %}
+    <div class="login-redirect">
+        <h1>No has iniciado sesion</h1>
+        <a href="{{ url_for('login') }}" class="login-redirect"><br><br>Iniciar Sesion</a>
+    </div>
+    {% endif %}
+</body>
+</html>

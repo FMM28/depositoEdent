@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #60B4C3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    background: url("../images/avatar.svg") no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.login-box h2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.login-box form div {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.login-box label {
+    margin-right: 10px;
+}
+
+.login-box img {
+    width: 20px;
+    height: 20px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.login-box button {
+    background-color: #459CAA;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.login-box button:hover {
+    background-color: #3f909c;
+}
+
+.error-sesion{
+    color: red;
+    display: block;
+    margin-top: 10px;
+}

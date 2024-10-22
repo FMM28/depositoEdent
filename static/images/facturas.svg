@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100"
+   height="100"
+   viewBox="0 0 26.458333 26.458333"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="facturas.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="5.9184838"
+     inkscape:cx="31.849374"
+     inkscape:cy="54.321345"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <rect
+       x="33.025146"
+       y="21.709423"
+       width="10.393701"
+       height="12.992126"
+       id="rect15" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path7"
+       style="fill:#4b4b4b;stroke-width:0.269519"
+       d="M 7.5111693 2.9460734 C 6.6723794 2.9460734 5.9970499 3.6214029 5.9970499 4.4601928 L 5.9970499 21.99814 C 5.9970499 22.83693 6.6723794 23.51226 7.5111693 23.51226 L 18.947164 23.51226 C 19.785953 23.51226 20.461283 22.83693 20.461283 21.99814 L 20.461283 7.193876 L 19.533174 6.2657673 L 19.533174 21.99814 C 19.533174 22.33944 19.288463 22.584151 18.947164 22.584151 L 7.5116861 22.584151 C 7.1703861 22.584151 6.9256754 22.339441 6.9256754 21.99814 L 6.9256754 4.4607096 C 6.9256754 4.1194099 7.171826 3.8731486 7.5116861 3.8731486 L 17.140556 3.8731486 L 16.21348 2.9460734 L 7.5111693 2.9460734 z " />
+    <path
+       id="path8"
+       style="fill:#4b4b4b;stroke-width:0.248;fill-opacity:1"
+       d="M 16.21348 2.9460734 L 16.21348 5.6797566 C 16.21348 6.5185466 16.888811 7.193876 17.7276 7.193876 L 20.461283 7.193876 L 16.21348 2.9460734 z M 17.019633 4.8927245 L 18.513598 6.3866902 L 17.728633 6.3866902 C 17.32232 6.3866902 17.019633 6.0848191 17.019633 5.6797566 L 17.019633 4.8927245 z " />
+    <rect
+       style="fill:#4b4b4b;fill-opacity:1;stroke-width:0.120803"
+       id="rect9"
+       width="6.2256756"
+       height="1.2085015"
+       x="12.416595"
+       y="8.4020243"
+       ry="0.60425073"
+       rx="0" />
+    <rect
+       style="fill:#4b4b4b;fill-opacity:1;stroke-width:0.159145"
+       id="rect10"
+       width="10.804762"
+       height="1.2085015"
+       x="7.8267856"
+       y="10.518689"
+       ry="0.60425073"
+       rx="0" />
+    <rect
+       style="fill:#4b4b4b;fill-opacity:1;stroke-width:0.159145"
+       id="rect12"
+       width="10.804762"
+       height="1.2085015"
+       x="7.8267856"
+       y="12.635354"
+       ry="0.60425073"
+       rx="0" />
+    <rect
+       style="fill:#4b4b4b;fill-opacity:1;stroke-width:0.159145"
+       id="rect13"
+       width="10.804762"
+       height="1.2085015"
+       x="7.8267856"
+       y="14.752018"
+       ry="0.60425073"
+       rx="0" />
+    <rect
+       style="fill:#4b4b4b;fill-opacity:1;stroke-width:0.120803"
+       id="rect14"
+       width="6.2256756"
+       height="1.2085015"
+       x="7.8267856"
+       y="16.868685"
+       ry="0.60425073"
+       rx="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.58611105px;font-family:Calibri;-inkscape-font-specification:'Calibri Bold';fill:#4b4b4b;fill-opacity:1;stroke-width:0.248"
+       x="8.5277147"
+       y="8.5583315"
+       id="text15"><tspan
+         sodipodi:role="line"
+         id="tspan15"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:'Calibri Bold';stroke-width:0.248;font-size:4.58611105px"
+         x="8.5277147"
+         y="8.5583315">$</tspan></text>
+  </g>
+</svg>

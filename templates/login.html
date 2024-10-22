@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_login.css') }}">
+    <title>Login</title>
+</head>
+<body>
+    <div class="login">
+        <div class="login-box">
+            <div class="avatar"></div>
+            <h2>Iniciar Sesión</h2>
+            <form action="{{ url_for('login') }}" method="post" class="login-form">
+                <div>
+                    <label for="username">
+                        <img src="{{ url_for('static', filename='images/usuario.svg') }}" alt="Usuario">
+                    </label>
+                    <input type="text" id="username" name="username" placeholder="Usuario" required>
+                </div>
+                <div>
+                    <label for="password">
+                        <img src="{{ url_for('static', filename='images/password.svg') }}" alt="Contraseña">
+                    </label>
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+        {% with messages = get_flashed_messages(with_categories=True) %}
+                {% if messages %}
+                    <div class="error-sesion">
+                        {% for category, message in messages %}
+                            {{ message }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+    </div>
+</body>
+</html>
