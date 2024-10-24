@@ -17,13 +17,13 @@ def login():
         password = request.form['password']
 
         cursor = get_db_connection()
-        user = cursor.execute('SELECT * from users where username = ?',(username,)).fetchone()
+        user = cursor.execute('SELECT * from usuarios where username = ?',(username,)).fetchone()
         cursor.close()
 
         if user and password==user['password']:
             session['username'] = username
             session['role'] = user['role']
-            session['user_id'] = user['user_id']
+            session['user_id'] = user['id_usuario']
             return redirect(url_for('home'))
         else:
             flash('Usuario o Contraseña incorrecto')
