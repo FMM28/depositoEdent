@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block titulo %}
+    Inventario
+{% endblock %}
+
+{% block cuerpo %}
+    <div class="products">
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Buscar Productos" value="{{ search_query }}">
+            <button onclick="searchProducts()">Buscar</button>
+        </div>
+        {% if categorias %}
+            <div class="product-category">
+                {% for categoria in categorias %}
+                    <div class="category">
+                        {{ categoria }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% elif products %}
+            <div class="product-list">
+                {% for product in products %}
+                    <div class="product-item" onclick="selectProduct( `{{ product['id'] }}` )"> 
+                        <h3>{{ product['nombre'] }}</h3>
+                        <p>Precio: ${{ product['precio_venta'] }}&nbsp;&nbsp;&nbsp;&nbsp;Stock: {{ product['stock'] }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="error-products">
+                Ocurrio un error al buscar productos
+            </div>
+        {% endif %}
+
+        <div class="paginas">
+            {% if page > 1 %}
+                <a href="{{ url_for('inventario', page=page-1, search=search_query, id=selected_product['id'] if selected_product else '') }}">Anterior</a>
+            {% endif %}
+            <span>Página {{ page }} de {{ total_pages }}</span>
+            {% if page < total_pages %}
+                <a href="{{ url_for('inventario', page=page+1, search=search_query, id=selected_product['id'] if selected_product else '') }}">Siguiente</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="product-options">
+
+    </div>
+    <div class="other-product-options">
+
+    </div>
+{% endblock %}
