@@ -44,9 +44,13 @@
         </div>
     </div>
     <div class="product-options">
-
+        {% if selected_product %}
+            
+        {% else %}
+            Ningun producto seleccionado
+        {% endif %}
     </div>
     <div class="other-product-options">
-
+        a
     </div>
 {% endblock %}
