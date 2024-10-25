@@ -109,7 +109,7 @@ def pedidos():
 
 @app.route('/administracion')
 def administracion():
-    return render_template('base.html')
+    return render_template('administracion.html')
 
 @app.route('/facturas')
 def facturas():
