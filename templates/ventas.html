@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block css_add %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_ventas.css') }}">
+{% endblock %}
+{% block titulo %}
+    Ventas
+{% endblock %}
+{% block cuerpo %}
+    
+    <div class="sales-container">
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Buscar productos">
+            <button>Buscar</button>
+        </div>
+
+        <div class="categories">
+            <div class="category">Categoría</div>
+            <div class="category">Categoría</div>
+            <div class="category">Categoría</div>
+            <div class="category">Categoría</div>
+            <div class="category">Categoría</div>
+            <div class="category">Categoría</div>
+        </div>
+
+        <div class="cart">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Producto_1</td>
+                        <td>X</td>
+                        <td>$X</td>
+                        <td>$X</td>
+                    </tr>
+                    <tr>
+                        <td>Producto_2</td>
+                        <td>X</td>
+                        <td>$X</td>
+                        <td>$X</td>
+                    </tr>
+                    <tr>
+                        <td>Producto_3</td>
+                        <td>X</td>
+                        <td>$X</td>
+                        <td>$X</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="total">
+                <span>Total: $X</span>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button>Pago</button>
+            <button>Pedido</button>
+            <button>Factura</button>
+            <button>Limpiar carrito</button>
+        </div>
+    </div>
+
+{% endblock %}

@@ -35,7 +35,7 @@ def home():
     
 @app.route('/ventas')
 def ventas():
-    return render_template('base.html')
+    return render_template('ventas.html')
 
 @app.route('/inventario')
 def inventario():
@@ -78,7 +78,7 @@ def inventario():
     else:
         offset = (page - 1) * 12
         
-        query = '''SELECT nombre FROM categorias ORDER BY nombre LIMIT 10 OFFSET ?'''
+        query = '''SELECT nombre FROM categorias ORDER BY nombre LIMIT 12 OFFSET ?'''
         cursor.execute(query, (offset,))
         categorias = cursor.fetchall()
 
