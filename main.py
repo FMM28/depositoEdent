@@ -46,6 +46,9 @@ def inventario():
 
     conn = get_db_connection()
     cursor = conn.cursor()
+    
+    categorias = None
+    products = None
 
     if search_query != '':
         offset = (page - 1) * 10
@@ -65,7 +68,7 @@ def inventario():
         
         query = '''SELECT * FROM productos WHERE categoria = ? ORDER BY nombre LIMIT 10 OFFSET ?'''
         cursor.execute(query, (selected_category, offset))
-        categorias = cursor.fetchall()
+        products = cursor.fetchall()
 
         cursor.execute('SELECT COUNT(*) FROM products WHERE nombre LIKE ?', (f'%{search_query}%',))
         total_count = cursor.fetchone()[0]
@@ -75,9 +78,9 @@ def inventario():
     else:
         offset = (page - 1) * 12
         
-        query = '''SELECT * FROM categorias ORDER BY nombre LIMIT 10 OFFSET ?'''
+        query = '''SELECT nombre FROM categorias ORDER BY nombre LIMIT 10 OFFSET ?'''
         cursor.execute(query, (offset,))
-        products = cursor.fetchall()
+        categorias = cursor.fetchall()
 
         cursor.execute('SELECT COUNT(*) FROM categorias')
         total_count = cursor.fetchone()[0]

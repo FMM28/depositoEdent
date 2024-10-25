@@ -4,6 +4,7 @@
 {% endblock %}
 
 {% block cuerpo %}
+
     <div class="products">
         <div class="search-bar">
             <input type="text" id="search" placeholder="Buscar Productos" value="{{ search_query }}">
@@ -13,7 +14,7 @@
             <div class="product-category">
                 {% for categoria in categorias %}
                     <div class="category">
-                        {{ categoria }}
+                        {{ categoria['nombre'] }}
                     </div>
                 {% endfor %}
             </div>
@@ -34,11 +35,11 @@
 
         <div class="paginas">
             {% if page > 1 %}
-                <a href="{{ url_for('inventario', page=page-1, search=search_query, id=selected_product['id'] if selected_product else '') }}">Anterior</a>
+                <a href="{{ url_for('inventario', page=page-1, search=search_query, id=selected_product['id'] if selected_product else '', selected_category=selected_categor if selected_category else None) }}">Anterior</a>
             {% endif %}
             <span>Página {{ page }} de {{ total_pages }}</span>
             {% if page < total_pages %}
-                <a href="{{ url_for('inventario', page=page+1, search=search_query, id=selected_product['id'] if selected_product else '') }}">Siguiente</a>
+                <a href="{{ url_for('inventario', page=page+1, search=search_query, id=selected_product['id'] if selected_product else '', selected_category=selected_categor if selected_category else None) }}">Siguiente</a>
             {% endif %}
         </div>
     </div>
